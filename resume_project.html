@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<style>
+    /* CSS animations */
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+    }
+
+    body {
+        background-color: #1a1a1a; /* Dark background */
+        color: #fff; /* White text color */
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        animation: fadeIn 1s ease-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .header {
+        animation: slideInLeft 1s ease-out;
+        text-align: center;
+        margin-bottom: 50px;
+        color: #fff;
+    }
+
+    .features {
+        animation: slideInRight 1s ease-out;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch; /* Ensure equal height for cards */
+        width: 80%;
+        margin-top: 50px;
+    }
+    .header h1{
+        font-size: 38px;
+        color: goldenrod;
+    }
+    .feature {
+        text-align: center;
+        padding: 20px;
+        background-color: #233040; /* Dark card background */
+        border-radius: 10px;
+        width: 30%;
+        transition: transform 0.3s ease;
+    }
+
+    .feature:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature h3 {
+        margin-bottom: 20px;
+        color: goldenrod;
+    }
+
+    .feature p {
+        font-size: 20px;
+        line-height: 1.6;
+        color:#22d3ee;
+    }
+
+</style>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FitFocus</title>
+  <link href="styling.css" rel="stylesheet" type="text/css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet"href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body class="bg-dark text-light">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <nav class="navbar navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a class="navbar-link nav-link text-light active-text-danger" style="font-size: 1.2rem;" href="index.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHome</a>
+      </span>
+      <a class="navbar-link nav-link text-light active-text-danger" style="font-size: 1.2rem;" href="resume_about.html">Education</a>
+      </span>
+      <span>
+      <a class="navbar-link nav-link text-light" style="font-size: 1.2rem;" href="resume_skills.html">Skills</a>
+      </span>
+      <a class="navbar-link nav-link text-light" style="font-size: 1.2rem;" href="resume_experience.html">Experiences</a>
+      </span>
+      <a class="navbar-link nav-link text-light" style="font-size: 1.2rem;" href="resume_project.html">Projects</a>
+      </span>
+      <a class="navbar-link nav-link text-light" style="font-size: 1.2rem;" href="resume_contact.html">Contact</a>
+      </span>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-size: 1.5rem;color:#22d3ee;" href="index.html">HOME</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link text-dark" aria-current="page" href="index.html"><span class="material-symbols-outlined">person</span>&nbsp&nbsp Profile</a>
+            </li>
+            <br>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="resume_about.html"><span class="material-symbols-outlined">accessibility</span>&nbsp&nbsp Education</a>
+            </li>
+            <br>
+            <li class="nav-item">
+              <a class="nav-link text-dark"  href="resume_skills.html"><span class="material-symbols-outlined">calculate</span>&nbsp&nbsp Skills</a>
+            </li><br>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="resume_experience.html"><span class="material-symbols-outlined">work</span>&nbsp&nbsp Experiences</a>
+            </li><br>
+            <li class="nav-item">
+              <a class="nav-link text-dark" href="resume_project.html"><span class="material-symbols-outlined">inventory</span>&nbsp&nbsp Projects</a>
+            </li><br> <li class="nav-item">
+                <a class="nav-link text-dark" href="resume_contact.html"><span class="material-symbols-outlined">contact_support</span>&nbsp&nbsp Contact</a>
+              </li><br>
+            </li>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <body class="con">
+    <div class="container">
+        <div class="header">
+            <br><br>
+            <h1>FitFocus</h1>
+            <p><b>Your Ultimate Fitness & Health Tracking Solution</b></p>
+            <p>FitFocus is a holistic fitness and health tracking platform designed to empower users on their wellness journey. It provides seamless fitness tracking tools for monitoring progress, calculating BMI, and managing calorie intake. With personalized workout plans and social connectivity features, users can engage with friends, access pre-recorded workouts, and participate in challenges. Nutritional guidance, progress visualization, and a user-friendly interface ensure a comprehensive and motivating experience. FitFocus is committed to continual improvement, enhancing its features to support users in achieving their fitness goals effectively.</p>
+        </div>
+
+        <div class="features">
+            <div class="feature">
+                <h3>Calculate BMI & Calories</h3>
+                <p>Effortlessly calculate your Body Mass Index (BMI) and track calorie consumption for a healthy lifestyle.</p>
+            </div>
+            <div class="feature">
+                <h3>Pre-recorded Workout Plans</h3>
+                <p>Access a variety of workout plans tailored to your fitness goals, from weight loss to muscle gain.</p>
+            </div>
+            <div class="feature">
+                <h3>Connect with Friends</h3>
+                <p>Stay motivated by connecting with friends, sharing achievements, and competing in fitness challenges.</p>
+            </div>
+        </div>
+    </div>
+
+  <footer class="mainfoot">
+    <div class="foot">
+      <h9 style="font-size: 20px;color:white;"><b>Contact Handle:</b></h9>
+      <br><br>
+      <p>atharvachinchane10@gmail.com</p>
+      <p>9769277343</p>  
+    </div>
+    <div class="foot">
+      <h9 style="font-size: 20px;color:white;"><b>Social Handle:</b></h9>
+      <br><br>
+      <a href="#" class="fa fa-facebook"></a>&nbsp&nbsp<a href="https://twitter.com/Atharva50980909" class="fa fa-twitter"></a>&nbsp&nbsp<a href="https://www.linkedin.com/in/atharva-chinchane/" class="fa fa-linkedin"></a>
+    </div>
+  </footer>
+</body>
+</html>

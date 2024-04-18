@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitFocus</title>
+    <link href="styling.css" rel="stylesheet" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* CSS animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body { /* Dark background */
+            color: #fff; /* White text color */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+            padding-top: 50px;
+        }
+
+        .card {
+            width: 400px;
+            height: 600px; /* Increased height */
+            margin-bottom: 30px;
+            padding: 30px;
+            background-color: #233040; /* Dark card background */
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .card h2 {
+            text-align: center;
+            color: goldenrod;
+        }
+
+        .skills {
+            margin-bottom: 15px;
+            
+        }
+
+        .skill {
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+            color: #fff;
+        }
+
+        .skill-info {
+            display: none;
+            font-size: 14px;
+            line-height: 1.5;
+            background-color: #333; /* Dark card background */
+            padding: 10px;
+            border-radius: 5px;
+            position: absolute;
+            z-index: 1;
+            width: 200px;
+        }
+
+        .skill:hover .skill-info {
+            display: block;
+        }
+
+        .skill:hover {
+            color:#22d3ee; /* Golden color on hover */
+        }
+
+        .images {
+            text-align: center;
+        }
+
+        .images img {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #ffd700; /* Golden border */
+        }
+
+    </style>
+</head>
+<body class="bg-dark">
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-link nav-link text-light active-text-danger" style="font-size: 1.2rem;" href="index.html">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspHome</a>
+          </span>
+          <a class="navbar-link nav-link text-light active-text-danger" style="font-size: 1.2rem;" href="resume_about.html">Education</a>
+          </span>
+          <span>
+          <a class="navbar-link nav-link text-light" style="font-size: 1.2rem;" href="resume_skills.html">Skills</a>
+          </span>
+          <a class="navbar-link nav-link text-light" style="font-size: 1.2rem;" href="resume_experience.html">Experiences</a>
+          </span>
+          <a class="navbar-link nav-link text-light" style="font-size: 1.2rem;" href="resume_project.html">Projects</a>
+          </span>
+          <a class="navbar-link nav-link text-light" style="font-size: 1.2rem;" href="resume_contact.html">Contact</a>
+          </span>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-size: 1.5rem;color:#22d3ee;" href="index.html">HOME</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link text-dark" aria-current="page" href="index.html"><span class="material-symbols-outlined">person</span>&nbsp&nbsp Profile</a>
+                </li>
+                <br>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="resume_about.html"><span class="material-symbols-outlined">accessibility</span>&nbsp&nbsp Education</a>
+                </li>
+                <br>
+                <li class="nav-item">
+                  <a class="nav-link text-dark"  href="resume_skills.html"><span class="material-symbols-outlined">calculate</span>&nbsp&nbsp Skills</a>
+                </li><br>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="resume_experience.html"><span class="material-symbols-outlined">work</span>&nbsp&nbsp Experiences</a>
+                </li><br>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="resume_project.html"><span class="material-symbols-outlined">inventory</span>&nbsp&nbsp Projects</a>
+                </li><br> <li class="nav-item">
+                    <a class="nav-link text-dark" href="resume_contact.html"><span class="material-symbols-outlined">contact_support</span>&nbsp&nbsp Contact</a>
+                  </li><br>
+                </li>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>  
+    <div class="container">
+        <div class="card">
+            <div class="images">
+                <img src="A:\web\resume_\laptop-with-program-code-isometric-icon-software-development-programming-applications-dark-neon_39422-971.avif" alt="Image">
+            </div><br>
+            <h2>Technical Skills</h2><br>
+            <div class="skills">
+                <div class="skill">
+                    Python
+                    <div class="skill-info">
+                        Proficient in Python for data analysis, web development, and automation tasks.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    HTML/CSS
+                    <div class="skill-info">
+                        Skilled in HTML5 and CSS3 for building responsive and visually appealing web interfaces.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    JavaScript
+                    <div class="skill-info">
+                        Experienced in JavaScript for front-end development and implementing interactive features.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    SQL
+                    <div class="skill-info">
+                        Proficient in SQL for database management and querying data efficiently.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    React.js
+                    <div class="skill-info">
+                        Familiar with React.js for building dynamic and interactive user interfaces.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    C/C++
+                    <div class="skill-info">
+                        Knowledgeable in all basic concepts and applications of C/C++.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="images">
+                <img src="A:\web\resume_\7-Benefits-That-Highlight-The-Importance-Of-Soft-Skills-In-The-Workplace.webp" alt="Image">
+            </div><br>
+            <h2>Soft Skills</h2><br>
+            <div class="skills">
+                <div class="skill">
+                    Communication
+                    <div class="skill-info">
+                        Excellent verbal and written communication skills, adept at conveying complex ideas clearly and effectively.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    Leadership
+                    <div class="skill-info">
+                        Strong leadership abilities demonstrated through leading teams and projects to successful outcomes.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    Problem Solving
+                    <div class="skill-info">
+                        Skilled in analyzing problems, identifying solutions, and implementing effective problem-solving strategies.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    Adaptability
+                    <div class="skill-info">
+                        Flexible and adaptable to changing environments and challenges, with the ability to quickly learn and adjust.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    Collaboration
+                    <div class="skill-info">
+                        Effective team player, capable of collaborating with diverse teams to achieve common goals.
+                    </div>
+                </div><br>
+                <div class="skill">
+                    Time Management
+                    <div class="skill-info">
+                        Strong time management skills, able to prioritize tasks, meet deadlines, and deliver quality work under pressure.
+                    </div>
+                </div><br>
+            </div>
+        </div>
+    </div>
+
+    <footer class="mainfoot">
+        <div class="foot">
+          <h9 style="font-size: 20px;color:white;"><b>Contact Handle:</b></h9>
+          <br><br>
+          <p>atharvachinchane10@gmail.com</p>
+          <p>9769277343</p>  
+        </div>
+        <div class="foot">
+          <h9 style="font-size: 20px;color:white;"><b>Social Handle:</b></h9>
+          <br><br>
+          <a href="#" class="fa fa-facebook"></a>&nbsp&nbsp<a href="https://twitter.com/Atharva50980909" class="fa fa-twitter"></a>&nbsp&nbsp<a href="https://www.linkedin.com/in/atharva-chinchane/" class="fa fa-linkedin"></a>
+        </div>
+      </footer>
+</body>
+</html>
