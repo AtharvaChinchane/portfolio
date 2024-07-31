@@ -1,4 +1,5 @@
 Atharva Chinchane's Portfolio
+
 Welcome to my portfolio! My name is Atharva Chinchane, and I am a Computer Science and Engineering (CSE) student with a specialization in Data Science. I am passionate about leveraging technology to solve real-world problems and am constantly seeking to expand my knowledge and expertise in the field. This portfolio is a comprehensive showcase of my projects, skills, and experiences.
 
 Throughout my academic journey and personal projects, I have worked on various software development and data science projects that demonstrate my ability to apply theoretical knowledge to practical applications. My projects span areas such as machine learning, data analysis, web development, and more. Each project includes detailed descriptions, the technologies used, key features, and, where applicable, live demos and GitHub repositories.
